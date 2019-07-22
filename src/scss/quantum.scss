@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@import 'quantum-colors';
+@import 'quantum-buttons';
+@import 'quantum-inputs';
+@import 'quantum-checkbox';
+@import 'quantum-typography';
+
+*
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    text-decoration: none;
+}
+
+html
+{
+    min-height: 100vh;
+    box-sizing: border-box;
+}

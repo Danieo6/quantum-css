@@ -1,0 +1,101 @@
+$font-stack: 'Catamaran', Arial, sans-serif;
+$font-base: 18px;
+$font-line-height: 1.6;
+
+$font-size-h1: 5rem;
+$font-size-h2: 3.75rem;
+$font-size-h3: 3rem;
+$font-size-h4: 2.125rem;
+$font-size-h5: 1.5rem;
+$font-size-h6: 1.25rem;
+
+body
+{
+    font-size: $font-base;
+    line-height: $font-line-height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: 400;
+    line-height: 110%;
+}
+
+h1
+{
+    font-size: $font-size-h1;
+    margin: ($font-size-h1 * 0.66) 0 ($font-size-h1 * 0.4) 0;
+}
+
+h2
+{
+    font-size: $font-size-h2;
+    margin: ($font-size-h2 * 0.66) 0 ($font-size-h2 * 0.4) 0;
+}
+
+h3
+{
+    font-size: $font-size-h3;
+    margin: ($font-size-h3 * 0.66) 0 ($font-size-h3 * 0.4) 0;
+}
+
+h4
+{
+    font-size: $font-size-h4;
+    margin: ($font-size-h4 * 0.66) 0 ($font-size-h4 * 0.4) 0;
+}
+
+h5
+{
+    font-size: $font-size-h5;
+    margin: ($font-size-h5 * 0.66) 0 ($font-size-h5 * 0.4) 0;
+}
+
+h6
+{
+    font-size: $font-size-h6;
+    margin: ($font-size-h6 * 0.66) 0 ($font-size-h6 * 0.4) 0;
+}
+
+
+em{ font-style: italic; }
+
+strong{ font-weight: 500; }
+
+small{ font-size: 75%; }
+
+.light{ font-weight: 300; }
+
+.thin{ font-weight: 100; }
+
+s, del{ text-decoration: line-through; }
+
+u, ins{ text-decoration: underline; }
+
+blockquote
+{
+    display: block;
+    width: fit-content;
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-left: 5px solid $cloud;
+
+    &>.author
+    {
+        display: block;
+        text-align: right;
+        font-weight: 500;
+        font-style: italic;
+    }
+}
+
+code
+{
+    display: block;
+    text-align: left;
+    padding: 15px 20px;
+    font-weight: 300;
+    background: rgba($cloud, 0.05);
+    border-radius: 3px;
+}

@@ -1,0 +1,213 @@
+@mixin active-colors($color)
+{
+    &>input:focus{ border-color: $color; }
+    &>input:focus ~ label{ color: $color; }
+}
+
+input
+{
+    position: relative;
+    display: inline-block;
+    background: none;
+    margin: 5px 10px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: 400;
+    border-style: solid;
+    border-width: 1px;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    &.rounded
+    {
+        border-radius: 5px;
+    }
+
+    &:focus
+    {
+        &.active-turquoise{ border-color: $turquoise; }
+        &.active-green-sea{ border-color: $green-sea; }
+        &.active-emerald{ border-color: $emerald; }
+        &.active-nephritis{ border-color: $nephritis; }
+        &.active-peter-river{ border-color: $peter-river; }
+        &.active-belize-hole{ border-color: $belize-hole; }
+        &.active-amethyst{ border-color: $amethyst; }
+        &.active-wisteria{ border-color: $wisteria; }
+        &.active-wet-asphalt{ border-color: $wet-asphalt; }
+        &.active-midnight-blue{ border-color: $midnight-blue; }
+        &.active-sunflower{ border-color: $sunflower; }
+        &.active-orange{ border-color: $orange; }
+        &.active-carrot{ border-color: $carrot; }
+        &.active-pumpkin{ border-color: $pumpkin; }
+        &.active-alizarin{ border-color: $alizarin; }
+        &.active-pomegranate{ border-color: $pomegranate; }
+        &.active-cloud{ border-color: $cloud; }
+        &.active-silver{ border-color: $silver; }
+        &.active-concrete{ border-color: $concrete; }
+        &.active-asbestos{ border-color: $asbestos; }
+        &.active-blue-nights{ border-color: $blue-nights; }
+        &.active-electromagnetic{ border-color: $electromagnetic; }
+    }
+
+    &[disabled]
+    {
+        opacity: 0.3;
+        border-style: dashed;
+        cursor: default;
+    }
+
+    &:required{ box-shadow: none; }
+}
+
+div.material-input
+{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 5px 10px;
+    padding-top: 10px;
+
+    &>input
+    {
+        border: none;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        margin: 0;
+        padding: 8px 0;
+        color: inherit;
+    }
+
+    &>label
+    {
+        position: absolute;
+        font-size: 1rem;
+        top: calc(50% - 0.5rem);
+        left: 0px;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    &>input:focus ~ label, &>input:valid ~ label, &>input[placeholder] ~ label
+    {
+        top: 0;
+        font-size: 0.8rem;
+    }
+
+    &>input[disabled]{ border-bottom-style: dashed; }
+
+    &>input[disabled] ~ label
+    { 
+        opacity: 0.3;
+        cursor: default;
+    }
+
+    &[data-helper]::after
+    {
+        content: attr(data-helper);
+        position: absolute;
+        bottom: -1.3rem;
+        left: 0;
+        font-size: 0.75rem;
+    }
+
+    &.active-turquoise{ @include active-colors($turquoise); }
+    &.active-green-sea{ @include active-colors($green-sea); }
+    &.active-emerald{ @include active-colors($emerald); }
+    &.active-nephritis{ @include active-colors($nephritis); }
+    &.active-peter-river{ @include active-colors($peter-river); }
+    &.active-belize-hole{ @include active-colors($belize-hole); }
+    &.active-amethyst{ @include active-colors($amethyst); }
+    &.active-wisteria{ @include active-colors($wisteria); }
+    &.active-wet-asphalt{ @include active-colors($wet-asphalt); }
+    &.active-midnight-blue{ @include active-colors($midnight-blue); }
+    &.active-sunflower{ @include active-colors($sunflower); }
+    &.active-orange{ @include active-colors($orange); }
+    &.active-carrot{ @include active-colors($carrot); }
+    &.active-pumpkin{ @include active-colors($pumpkin); }
+    &.active-alizarin{ @include active-colors($alizarin); }
+    &.active-pomegranate{ @include active-colors($pomegranate); }
+    &.active-cloud{ @include active-colors($cloud); }
+    &.active-silver{ @include active-colors($silver); }
+    &.active-concrete{ @include active-colors($concrete); }
+    &.active-asbestos{ @include active-colors($asbestos); }
+    &.active-blue-nights{ @include active-colors($blue-nights); }
+    &.active-electromagnetic{ @include active-colors($electromagnetic); }
+}
+
+.with-icon
+{
+    display: inline-block;
+    position: relative;
+    padding-left: 45px;
+
+    &>input
+    { 
+        color: inherit;
+        margin: 0;
+    }
+
+    &>.fas
+    {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        top: 0;
+        left: 1px;
+        line-height: 45px;
+    }
+
+    &>input.rounded ~ .fas
+    {
+        left: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &.active-turquoise>input:focus{ border-color: $turquoise; }
+    &.active-green-sea>input:focus{ border-color: $green-sea; }
+    &.active-emerald>input:focus{ border-color: $emerald; }
+    &.active-nephritis>input:focus{ border-color: $nephritis; }
+    &.active-peter-river>input:focus{ border-color: $peter-river; }
+    &.active-belize-hole>input:focus{ border-color: $belize-hole; }
+    &.active-amethyst>input:focus{ border-color: $amethyst; }
+    &.active-wisteria>input:focus{ border-color: $wisteria; }
+    &.active-wet-asphalt>input:focus{ border-color: $wet-asphalt; }
+    &.active-midnight-blue>input:focus{ border-color: $midnight-blue; }
+    &.active-sunflower>input:focus{ border-color: $sunflower; }
+    &.active-orange>input:focus{ border-color: $orange; }
+    &.active-carrot>input:focus{ border-color: $carrot; }
+    &.active-pumpkin>input:focus{ border-color: $pumpkin; }
+    &.active-alizarin>input:focus{ border-color: $alizarin; }
+    &.active-pomegranate>input:focus{ border-color: $pomegranate; }
+    &.active-cloud>input:focus{ border-color: $cloud; }
+    &.active-silver>input:focus{ border-color: $silver; }
+    &.active-concrete>input:focus{ border-color: $concrete; }
+    &.active-asbestos>input:focus{ border-color: $asbestos; }
+    &.active-blue-nights>input:focus{ border-color: $blue-nights; }
+    &.active-electromagnetic>input:focus{ border-color: $electromagnetic; }
+
+    &.active-turquoise>.fas{ background-color: $turquoise; }
+    &.active-green-sea>.fas{ background-color: $green-sea; }
+    &.active-emerald>.fas{ background-color: $emerald; }
+    &.active-nephritis>.fas{ background-color: $nephritis; }
+    &.active-peter-river>.fas{ background-color: $peter-river; }
+    &.active-belize-hole>.fas{ background-color: $belize-hole; }
+    &.active-amethyst>.fas{ background-color: $amethyst; }
+    &.active-wisteria>.fas{ background-color: $wisteria; }
+    &.active-wet-asphalt>.fas{ background-color: $wet-asphalt; }
+    &.active-midnight-blue>.fas{ background-color: $midnight-blue; }
+    &.active-sunflower>.fas{ background-color: $sunflower; }
+    &.active-orange>.fas{ background-color: $orange; }
+    &.active-carrot>.fas{ background-color: $carrot; }
+    &.active-pumpkin>.fas{ background-color: $pumpkin; }
+    &.active-alizarin>.fas{ background-color: $alizarin; }
+    &.active-pomegranate>.fas{ background-color: $pomegranate; }
+    &.active-cloud>.fas{ background-color: $cloud; }
+    &.active-silver>.fas{ background-color: $silver; }
+    &.active-concrete>.fas{ background-color: $concrete; }
+    &.active-asbestos>.fas{ background-color: $asbestos; }
+    &.active-blue-nights>.fas{ background-color: $blue-nights; }
+    &.active-electromagnetic>.fas{ background-color: $electromagnetic; }
+}
+
+.with-icon-material{ display: inline-block; }

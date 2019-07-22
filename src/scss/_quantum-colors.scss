@@ -1,0 +1,267 @@
+//Colors
+$turquoise: #1abc9c;
+$green-sea: #16a085;
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+$peter-river: #3498db;
+$belize-hole: #2980b9;
+$amethyst: #9b59b6;
+$wisteria: #8e44ad;
+$wet-asphalt: #34495e;
+$midnight-blue: #2c3e50;
+$sunflower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$cloud: #ecf0f1;
+$silver: #bdc3c7;
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+$blue-nights: #353b48;
+$electromagnetic: #2f3640;
+
+//Color Config
+$border-darken-factor: 10%;
+
+@mixin placeholder($color)
+{
+    &::placeholder
+    {
+        color: $color;
+        opacity: 0.75;
+    }
+      
+    &:-ms-input-placeholder
+    {
+        color: $color;
+        opacity: 0.75;
+    }
+      
+    &::-ms-input-placeholder
+    {
+        color: $color;
+        opacity: 0.75;
+    }
+}
+
+.turquoise
+{
+    background-color: $turquoise;
+    border-color: $turquoise;
+}
+
+.green-sea
+{
+    background-color: $green-sea;
+    border-color: $green-sea;
+}
+
+.emerald
+{
+    background-color: $emerald;
+    border-color: $emerald;
+}
+
+.nephritis
+{
+    background-color: $nephritis;
+    border-color: $nephritis;
+}
+
+.peter-river
+{
+    background-color: $peter-river;
+    border-color: $peter-river;
+}
+
+.belize-hole
+{
+    background-color: $belize-hole;
+    border-color: $belize-hole;
+}
+
+.amethyst
+{
+    background-color: $amethyst;
+    border-color: $amethyst;
+}
+
+.wisteria
+{
+    background-color: $wisteria;
+    border-color: $wisteria;
+}
+
+.wet-asphalt
+{
+    background-color: $wet-asphalt;
+    border-color: $wet-asphalt;
+}
+
+.midnight-blue
+{
+    background-color: $midnight-blue;
+    border-color: $midnight-blue;
+}
+
+.sunflower
+{
+    background-color: $sunflower;
+    border-color: $sunflower;
+}
+
+.orange
+{
+    background-color: $orange;
+    border-color: $orange;
+}
+
+.carrot
+{
+    background-color: $carrot;
+    border-color: $carrot;
+}
+
+.pumpkin
+{
+    background-color: $pumpkin;
+    border-color: $pumpkin;
+}
+
+.alizarin
+{
+    background-color: $alizarin;
+    border-color: $alizarin;
+}
+
+.pomegranate
+{
+    background-color: $pomegranate;
+    border-color: $pomegranate;
+}
+
+.cloud
+{
+    background-color: $cloud;
+    border-color: $cloud;
+}
+
+.silver
+{
+    background-color: $silver;
+    border-color: $silver;
+}
+
+.concrete
+{
+    background-color: $concrete;
+    border-color: $concrete;
+}
+
+.asbestos
+{
+    background-color: $asbestos;
+    border-color: $asbestos;
+}
+
+.blue-nights
+{
+    background-color: $blue-nights;
+    border-color: $blue-nights;
+}
+
+.electromagnetic
+{
+    background-color: $electromagnetic;
+    border-color: $electromagnetic;
+}
+
+.border-turquoise{ border-color: $turquoise; }
+
+.border-green-sea{ border-color: $green-sea; }
+
+.border-emerald{ border-color: $emerald; }
+
+.border-nephritis{ border-color: $nephritis; }
+
+.border-peter-river{ border-color: $peter-river; }
+
+.border-belize-hole{ border-color: $belize-hole; }
+
+.border-amethyst{ border-color: $amethyst; }
+
+.border-wisteria{ border-color: $wisteria; }
+
+.border-wet-asphalt{ border-color: $wet-asphalt; }
+
+.border-midnight-blue{ border-color: $midnight-blue; }
+
+.border-sunflower{ border-color: $sunflower; }
+
+.border-orange{ border-color: $orange; }
+
+.border-carrot{ border-color: $carrot; }
+
+.border-pumpkin{ border-color: $pumpkin; }
+
+.border-alizarin{ border-color: $alizarin; }
+
+.border-pomegranate{ border-color: $pomegranate; }
+
+.border-cloud{ border-color: $cloud; }
+
+.border-silver{ border-color: $silver; }
+
+.border-concrete{ border-color: $concrete; }
+
+.border-asbestos{ border-color: $asbestos; }
+
+.border-blue-nights{ border-color: $blue-nights; }
+
+.border-electromagnetic{ border-color: $electromagnetic; }
+
+.txt-turquoise{ color: $turquoise; @include placeholder($turquoise); }
+
+.txt-green-sea{ color: $green-sea; @include placeholder($green-sea); }
+
+.txt-emerald{ color: $emerald; @include placeholder($emerald); }
+
+.txt-nephritis{ color: $nephritis; @include placeholder($nephritis); }
+
+.txt-peter-river{ color: $peter-river; @include placeholder($peter-river); }
+
+.txt-belize-hole{ color: $belize-hole; @include placeholder($belize-hole); }
+
+.txt-amethyst{ color: $amethyst; @include placeholder($amethyst); }
+
+.txt-wisteria{ color: $wisteria; @include placeholder($wisteria); }
+
+.txt-wet-asphalt{ color: $wet-asphalt; @include placeholder($wet-asphalt); }
+
+.txt-midnight-blue{ color: $midnight-blue; @include placeholder($midnight-blue); }
+
+.txt-sunflower{ color: $sunflower; @include placeholder($sunflower); }
+
+.txt-orange{ color: $orange; @include placeholder($orange); }
+
+.txt-carrot{ color: $carrot; @include placeholder($carrot); }
+
+.txt-pumpkin{ color: $pumpkin; @include placeholder($pumpkin); }
+
+.txt-alizarin{ color: $alizarin; @include placeholder($alizarin); }
+
+.txt-pomegranate{ color: $pomegranate; @include placeholder($pomegranate); }
+
+.txt-cloud{ color: $cloud;  @include placeholder($cloud); }
+
+.txt-silver{ color: $silver; @include placeholder($silver); }
+
+.txt-concrete{ color: $concrete; @include placeholder($concrete); }
+
+.txt-asbestos{ color: $asbestos; @include placeholder($asbestos); }
+
+.txt-blue-nights{ color: $blue-nights; @include placeholder($blue-nights); }
+
+.txt-electromagnetic{ color: $electromagnetic; @include placeholder($electromagnetic); }

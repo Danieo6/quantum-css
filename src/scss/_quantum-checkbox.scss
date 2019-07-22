@@ -1,0 +1,226 @@
+.switch
+{
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 28px;
+
+    &>input
+    {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &>.slider
+    {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $silver;
+        transition: .3s;
+        border-radius: 3px;
+    }
+
+    &>.slider:before
+    {
+        position: absolute;
+        content: "";
+        height: 24px;
+        width: 25px;
+        left: 2px;
+        bottom: 2px;
+        border-radius: 3px;
+        background-color: $cloud;
+        transition: .3s;
+    }
+
+    &>input:checked + .slider
+    {
+        background-color: $emerald;
+    }
+
+    &>input:checked + .slider:before
+    {
+        transform: translateX(27px);
+    }
+
+    &.round
+    {
+        &>.slider{ border-radius: 14px; }
+
+        &>.slider:before{ border-radius: 12px; }
+    }
+
+    &.dark
+    {
+        &>.slider{ background-color: $blue-nights; }
+
+        &>.slider:before{ background-color: $electromagnetic; }
+    }
+
+    &.active-turquoise{ &>input:checked + .slider { background-color: $turquoise; } }
+    &.active-green-sea{ &>input:checked + .slider { background-color: $green-sea; } }
+    &.active-emerald{ &>input:checked + .slider { background-color: $emerald; } }
+    &.active-nephritis{ &>input:checked + .slider { background-color: $nephritis; } }
+    &.active-peter-river{ &>input:checked + .slider { background-color: $peter-river; } }
+    &.active-belize-hole{ &>input:checked + .slider { background-color: $belize-hole; } }
+    &.active-amethyst{ &>input:checked + .slider { background-color: $amethyst; } }
+    &.active-wisteria{ &>input:checked + .slider { background-color: $wisteria; } }
+    &.active-wet-asphalt{ &>input:checked + .slider { background-color: $wet-asphalt; } }
+    &.active-midnight-blue{ &>input:checked + .slider { background-color: $midnight-blue; } }
+    &.active-sunflower{ &>input:checked + .slider { background-color: $sunflower; } }
+    &.active-orange{ &>input:checked + .slider { background-color: $orange; } }
+    &.active-carrot{ &>input:checked + .slider { background-color: $carrot; } }
+    &.active-pumpkin{ &>input:checked + .slider { background-color: $pumpkin; } }
+    &.active-alizarin{ &>input:checked + .slider { background-color: $alizarin; } }
+    &.active-pomegranate{ &>input:checked + .slider { background-color: $pomegranate; } }
+    &.active-cloud{ &>input:checked + .slider { background-color: $cloud; } }
+    &.active-silver{ &>input:checked + .slider { background-color: $silver; } }
+    &.active-concrete{ &>input:checked + .slider { background-color: $concrete; } }
+    &.active-asbestos{ &>input:checked + .slider { background-color: $asbestos; } }
+    &.active-blue-nights{ &>input:checked + .slider { background-color: $blue-nights; } }
+    &.active-electromagnetic{ &>input:checked + .slider { background-color: $electromagnetic; } }
+}
+
+.checkbox, .radio
+{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+
+    &>input
+    {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+    }
+
+    &>.checkmark
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: $silver;
+        transition: .3s;
+    }
+
+    &.radio>.checkmark
+    { 
+        width: 26px;
+        height: 26px;
+        border-radius: 50%; 
+    }
+
+    &:hover>.checkmark
+    {
+        background-color: darken($silver, 10%);
+    }
+
+    &>input:checked ~ .checkmark
+    {
+        background-color: $emerald;
+    }
+
+    &.active-turquoise{ &>input:checked ~ .checkmark { background-color: $turquoise; } }
+    &.active-green-sea{ &>input:checked ~ .checkmark { background-color: $green-sea; } }
+    &.active-emerald{ &>input:checked ~ .checkmark { background-color: $emerald; } }
+    &.active-nephritis{ &>input:checked ~ .checkmark { background-color: $nephritis; } }
+    &.active-peter-river{ &>input:checked ~ .checkmark { background-color: $peter-river; } }
+    &.active-belize-hole{ &>input:checked ~ .checkmark { background-color: $belize-hole; } }
+    &.active-amethyst{ &>input:checked ~ .checkmark { background-color: $amethyst; } }
+    &.active-wisteria{ &>input:checked ~ .checkmark { background-color: $wisteria; } }
+    &.active-wet-asphalt{ &>input:checked ~ .checkmark { background-color: $wet-asphalt; } }
+    &.active-midnight-blue{ &>input:checked ~ .checkmark { background-color: $midnight-blue; } }
+    &.active-sunflower{ &>input:checked ~ .checkmark { background-color: $sunflower; } }
+    &.active-orange{ &>input:checked ~ .checkmark { background-color: $orange; } }
+    &.active-carrot{ &>input:checked ~ .checkmark { background-color: $carrot; } }
+    &.active-pumpkin{ &>input:checked ~ .checkmark { background-color: $pumpkin; } }
+    &.active-alizarin{ &>input:checked ~ .checkmark { background-color: $alizarin; } }
+    &.active-pomegranate{ &>input:checked ~ .checkmark { background-color: $pomegranate; } }
+    &.active-cloud{ &>input:checked ~ .checkmark { background-color: $cloud; } }
+    &.active-silver{ &>input:checked ~ .checkmark { background-color: $silver; } }
+    &.active-concrete{ &>input:checked ~ .checkmark { background-color: $concrete; } }
+    &.active-asbestos{ &>input:checked ~ .checkmark { background-color: $asbestos; } }
+    &.active-blue-nights{ &>input:checked ~ .checkmark { background-color: $blue-nights; } }
+    &.active-electromagnetic{ &>input:checked ~ .checkmark { background-color: $electromagnetic; } }
+
+    &>.checkmark:after
+    {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid $cloud;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &.radio>.checkmark.round:after
+    {
+        content: "";
+        top: 6px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid $cloud;
+    }
+
+    &>.checkmark.cross:after
+    {
+        content: "+";
+        left: 11px;
+        top: -10px;
+        font-family: Arial !important;
+        font-size: 35px !important;
+        width: 25px;
+        height: 25px;
+        border: none;
+    }
+
+    &>input:checked ~ .checkmark:after
+    {
+        display: block;
+    }
+
+    &.round>.checkmark
+    {
+        border-radius: 5px;
+    }
+
+    &.dark
+    {
+        &>.checkmark{ background-color: $blue-nights; }
+
+        &:hover>.checkmark{ background-color: lighten($blue-nights, 10%); }
+
+        &>input:checked ~ .checkmark{ background-color: $emerald; }
+    }
+
+    &.disabled
+    {
+        &>.checkmark{ opacity: 0.5; }
+    }
+}
+
+.radio
+{
+
+}

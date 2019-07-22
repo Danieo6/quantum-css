@@ -1,0 +1,331 @@
+//Button Config
+$button-corner-radius: 5px;
+$button-hover-color-factor: 10%;
+$button-active-color-factor: 15%;
+
+@mixin box-shadow($height, $color)
+{
+    -webkit-box-shadow: 0px $height 0px 0px $color;
+    -moz-box-shadow: 0px $height 0px 0px $color;
+    box-shadow: 0px $height 0px 0px $color;
+}
+
+@mixin raised-effect($color, $position, $height)
+{
+    bottom: $position;
+    @include box-shadow($height, darken($color, $border-darken-factor));
+}
+
+@mixin ripple
+{
+    background-position: center;
+    //transition: background 0.5s;
+}
+
+@mixin ripple-hover($color)
+{
+    background: $color radial-gradient(circle, transparent 1%, $color 1%) center/15000%;
+}
+
+@mixin ripple-active($color)
+{
+    background-color: $color;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.btn
+{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 0 16px;
+    line-height: 36px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-sizing: border-box;
+    transition: all .3s linear;
+
+    &.flat
+    {
+        @include ripple();
+    }
+
+    &.rounded
+    {
+        border-radius: $button-corner-radius;
+    }
+
+    &.empty
+    {
+        background: transparent;
+        border-style: solid;
+        border-width: 1px;
+        @include ripple();
+    }
+
+    &.raised
+    {
+        bottom: 3px;
+        transition: all .1s linear;
+
+        &.turquoise{ @include box-shadow(5px, darken($turquoise, $border-darken-factor)); }
+        &.green-sea{ @include box-shadow(5px, darken($green-sea, $border-darken-factor)); }
+        &.emerald{ @include box-shadow(5px, darken($emerald, $border-darken-factor)); }
+        &.nephritis{ @include box-shadow(5px, darken($nephritis, $border-darken-factor)); }
+        &.peter-river{ @include box-shadow(5px, darken($peter-river, $border-darken-factor)); }
+        &.belize-hole{ @include box-shadow(5px, darken($belize-hole, $border-darken-factor)); }
+        &.amethyst{ @include box-shadow(5px, darken($amethyst, $border-darken-factor)); }
+        &.wisteria{ @include box-shadow(5px, darken($wisteria, $border-darken-factor)); }
+        &.wet-asphalt{ @include box-shadow(5px, darken($wet-asphalt, $border-darken-factor)); }
+        &.midnight-blue{ @include box-shadow(5px, darken($midnight-blue, $border-darken-factor)); }
+        &.sunflower{ @include box-shadow(5px, darken($sunflower, $border-darken-factor)); }
+        &.orange{ @include box-shadow(5px, darken($orange, $border-darken-factor)); }
+        &.carrot{ @include box-shadow(5px, darken($carrot, $border-darken-factor)); }
+        &.pumpkin{ @include box-shadow(5px, darken($pumpkin, $border-darken-factor)); }
+        &.alizarin{ @include box-shadow(5px, darken($alizarin, $border-darken-factor)); }
+        &.pomegranate{ @include box-shadow(5px, darken($pomegranate, $border-darken-factor)); }
+        &.cloud{ @include box-shadow(5px, darken($cloud, $border-darken-factor)); }
+        &.silver{ @include box-shadow(5px, darken($silver, $border-darken-factor)); }
+        &.concrete{ @include box-shadow(5px, darken($concrete, $border-darken-factor)); }
+        &.blue-nights{ @include box-shadow(5px, darken($blue-nights, $border-darken-factor)); }
+        &.electromagnetic{ @include box-shadow(5px, darken($electromagnetic, $border-darken-factor)); }
+    }
+
+    &.flat:hover
+    {
+        &.turquoise{ @include ripple-hover(darken($turquoise, $button-hover-color-factor)); }
+        &.green-sea{ @include ripple-hover(darken($green-sea, $button-hover-color-factor)); }
+        &.emerald{ @include ripple-hover(darken($emerald, $button-hover-color-factor)); }
+        &.nephritis{ @include ripple-hover(darken($nephritis, $button-hover-color-factor)); }
+        &.peter-river{ @include ripple-hover(lighten($peter-river, $button-hover-color-factor)); }
+        &.belize-hole{ @include ripple-hover(lighten($belize-hole, $button-hover-color-factor)); }
+        &.amethyst{ @include ripple-hover(darken($amethyst, $button-hover-color-factor)); }
+        &.wisteria{ @include ripple-hover(lighten($wisteria, $button-hover-color-factor)); }
+        &.wet-asphalt{ @include ripple-hover(lighten($wet-asphalt, $button-hover-color-factor)); }
+        &.midnight-blue{ @include ripple-hover(lighten($midnight-blue, $button-hover-color-factor)); }
+        &.sunflower{ @include ripple-hover(darken($sunflower, $button-hover-color-factor)); }
+        &.orange{ @include ripple-hover(darken($orange, $button-hover-color-factor)); }
+        &.carrot{ @include ripple-hover(darken($carrot, $button-hover-color-factor)); }
+        &.pumpkin{ @include ripple-hover(darken($pumpkin, $button-hover-color-factor)); }
+        &.alizarin{ @include ripple-hover(darken($alizarin, $button-hover-color-factor)); }
+        &.pomegranate{ @include ripple-hover(darken($pomegranate, $button-hover-color-factor)); }
+        &.cloud{ @include ripple-hover(darken($cloud, $button-hover-color-factor)); }
+        &.silver{ @include ripple-hover(darken($silver, $button-hover-color-factor)); }
+        &.concrete{ @include ripple-hover(darken($concrete, $button-hover-color-factor)); }
+        &.blue-nights{ @include ripple-hover(lighten($blue-nights, $button-hover-color-factor)); }
+        &.electromagnetic{ @include ripple-hover(lighten($electromagnetic, $button-hover-color-factor)); }
+    }
+
+    &.empty:hover
+    {
+        &.turquoise
+        { 
+            @include ripple-hover($turquoise);
+            color: darken($turquoise, 90%);
+        }
+        &.green-sea
+        {
+            @include ripple-hover($green-sea);
+            color: darken($green-sea, 90%);
+        }
+        &.emerald
+        { 
+            @include ripple-hover($emerald);
+            color: darken($emerald, 90%);
+        }
+        &.nephritis
+        { 
+            @include ripple-hover($nephritis);
+            color: darken($nephritis, 90%);
+        }
+        &.peter-river
+        { 
+            @include ripple-hover($peter-river);
+            color: lighten($peter-river, 35%);
+        }
+        &.belize-hole
+        { 
+            @include ripple-hover($belize-hole);
+            color: lighten($belize-hole, 35%);
+        }
+        &.amethyst
+        { 
+            @include ripple-hover($amethyst);
+            color: darken($amethyst, 90%);
+        }
+        &.wisteria
+        { 
+            @include ripple-hover($wisteria);
+            color: lighten($wisteria, 35%);
+        }
+        &.wet-asphalt
+        { 
+            @include ripple-hover($wet-asphalt);
+            color: lighten($wet-asphalt, 35%);
+        }
+        &.midnight-blue
+        { 
+            @include ripple-hover($midnight-blue);
+            color: lighten($midnight-blue, 35%);
+        }
+        &.sunflower
+        { 
+            @include ripple-hover($sunflower);
+            color: darken($sunflower, 30%);
+        }
+        &.orange
+        { 
+            @include ripple-hover($orange);
+            color: darken($orange, 30%);
+        }
+        &.carrot
+        { 
+            @include ripple-hover($carrot);
+            color: darken($carrot, 30%); 
+        }
+        &.pumpkin
+        { 
+            @include ripple-hover($pumpkin);
+            color: darken($pumpkin, 30%);
+        }
+        &.alizarin
+        { 
+            @include ripple-hover($alizarin);
+            color: darken($alizarin, 30%);
+        }
+        &.pomegranate
+        { 
+            @include ripple-hover($pomegranate);
+            color: darken($pomegranate, 30%);
+        }
+        &.cloud
+        { 
+            @include ripple-hover($cloud);
+            color: darken($cloud, 30%);
+        }
+        &.silver
+        { 
+            @include ripple-hover($silver);
+            color: darken($silver, 30%);
+        }
+        &.concrete
+        { 
+            @include ripple-hover($concrete);
+            color: darken($concrete, 30%);
+        }
+        &.blue-nights
+        { 
+            @include ripple-hover($blue-nights);
+            color: lighten($blue-nights, 35%);
+        }
+        &.electromagnetic
+        { 
+            @include ripple-hover($electromagnetic);
+            color: lighten($electromagnetic, 35%);
+        }
+    }
+
+    &.raised:hover
+    {
+        &.turquoise{ @include raised-effect($turquoise, 1px, 3px); }
+        &.green-sea{ @include raised-effect($green-sea, 1px, 3px); }
+        &.emerald{ @include raised-effect($emerald, 1px, 3px); }
+        &.nephritis{ @include raised-effect($nephritis, 1px, 3px); }
+        &.peter-river{ @include raised-effect($peter-river, 1px, 3px); }
+        &.belize-hole{ @include raised-effect($belize-hole, 1px, 3px); }
+        &.amethyst{ @include raised-effect($amethyst, 1px, 3px); }
+        &.wisteria{ @include raised-effect($wisteria, 1px, 3px); }
+        &.wet-asphalt{ @include raised-effect($wet-asphalt, 1px, 3px); }
+        &.midnight-blue{ @include raised-effect($midnight-blue, 1px, 3px); }
+        &.sunflower{ @include raised-effect($sunflower, 1px, 3px); }
+        &.orange{ @include raised-effect($orange, 1px, 3px); }
+        &.carrot{ @include raised-effect($carrot, 1px, 3px); }
+        &.pumpkin{ @include raised-effect($pumpkin, 1px, 3px); }
+        &.alizarin{ @include raised-effect($alizarin, 1px, 3px); }
+        &.pomegranate{ @include raised-effect($pomegranate, 1px, 3px); }
+        &.cloud{ @include raised-effect($cloud, 1px, 3px); }
+        &.silver{ @include raised-effect($silver, 1px, 3px); }
+        &.concrete{ @include raised-effect($concrete, 1px, 3px); }
+        &.asbestos{ @include raised-effect($asbestos, 1px, 3px); }
+        &.blue-nights{ @include raised-effect($blue-nights, 1px, 3px); }
+        &.electromagnetic{ @include raised-effect($electromagnetic, 1px, 3px); }
+    }
+
+    &.flat:active
+    {
+        &.turquoise{ @include ripple-active(darken($turquoise, $button-active-color-factor)); }
+        &.green-sea{ @include ripple-active(darken($green-sea, $button-active-color-factor)); }
+        &.emerald{ @include ripple-active(darken($emerald, $button-active-color-factor)); }
+        &.nephritis{ @include ripple-active(darken($nephritis, $button-active-color-factor)); }
+        &.peter-river{ @include ripple-active(lighten($peter-river, $button-active-color-factor)); }
+        &.belize-hole{ @include ripple-active(lighten($belize-hole, $button-active-color-factor)); }
+        &.amethyst{ @include ripple-active(darken($amethyst, $button-active-color-factor)); }
+        &.wisteria{ @include ripple-active(lighten($wisteria, $button-active-color-factor)); }
+        &.wet-asphalt{ @include ripple-active(lighten($wet-asphalt, $button-active-color-factor)); }
+        &.midnight-blue{ @include ripple-active(lighten($midnight-blue, $button-active-color-factor)); }
+        &.sunflower{ @include ripple-active(darken($sunflower, $button-active-color-factor)); }
+        &.orange{ @include ripple-active(darken($orange, $button-active-color-factor)); }
+        &.carrot{ @include ripple-active(darken($carrot, $button-active-color-factor)); }
+        &.pumpkin{ @include ripple-active(darken($pumpkin, $button-active-color-factor)); }
+        &.alizarin{ @include ripple-active(darken($alizarin, $button-active-color-factor)); }
+        &.pomegranate{ @include ripple-active(darken($pomegranate, $button-active-color-factor)); }
+        &.cloud{ @include ripple-active(darken($cloud, $button-active-color-factor)); }
+        &.silver{ @include ripple-active(darken($silver, $button-active-color-factor)); }
+        &.concrete{ @include ripple-active(darken($concrete, $button-active-color-factor)); }
+        &.blue-nights{ @include ripple-active(lighten($blue-nights, $button-active-color-factor)); }
+        &.electromagnetic{ @include ripple-active(lighten($electromagnetic, $button-active-color-factor)); }
+    }
+
+    &.empty:active
+    {
+        &.turquoise{ @include ripple-active(darken($turquoise, $button-active-color-factor)); }
+        &.green-sea{ @include ripple-active(darken($green-sea, $button-active-color-factor)); }
+        &.emerald{ @include ripple-active(darken($emerald, $button-active-color-factor)); }
+        &.nephritis{ @include ripple-active(darken($nephritis, $button-active-color-factor)); }
+        &.peter-river{ @include ripple-active(lighten($peter-river, $button-active-color-factor)); }
+        &.belize-hole{ @include ripple-active(lighten($belize-hole, $button-active-color-factor)); }
+        &.amethyst{ @include ripple-active(darken($amethyst, $button-active-color-factor)); }
+        &.wisteria{ @include ripple-active(lighten($wisteria, $button-active-color-factor)); }
+        &.wet-asphalt{ @include ripple-active(lighten($wet-asphalt, $button-active-color-factor)); }
+        &.midnight-blue{ @include ripple-active(lighten($midnight-blue, $button-active-color-factor)); }
+        &.sunflower{ @include ripple-active(darken($sunflower, $button-active-color-factor)); }
+        &.orange{ @include ripple-active(darken($orange, $button-active-color-factor)); }
+        &.carrot{ @include ripple-active(darken($carrot, $button-active-color-factor)); }
+        &.pumpkin{ @include ripple-active(darken($pumpkin, $button-active-color-factor)); }
+        &.alizarin{ @include ripple-active(darken($alizarin, $button-active-color-factor)); }
+        &.pomegranate{ @include ripple-active(darken($pomegranate, $button-active-color-factor)); }
+        &.cloud{ @include ripple-active(darken($cloud, $button-active-color-factor)); }
+        &.silver{ @include ripple-active(darken($silver, $button-active-color-factor)); }
+        &.concrete{ @include ripple-active(darken($concrete, $button-active-color-factor)); }
+        &.blue-nights{ @include ripple-active(lighten($blue-nights, $button-active-color-factor)); }
+        &.electromagnetic{ @include ripple-active(lighten($electromagnetic, $button-active-color-factor)); }
+    }
+
+    &.raised:active
+    {
+        &.turquoise{ @include raised-effect($turquoise, -1px, 0px); }
+        &.green-sea{ @include raised-effect($green-sea, -1px, 0px); }
+        &.emerald{ @include raised-effect($emerald, -1px, 0px); }
+        &.nephritis{ @include raised-effect($nephritis, -1px, 0px); }
+        &.peter-river{ @include raised-effect($peter-river, -1px, 0px); }
+        &.belize-hole{ @include raised-effect($belize-hole, -1px, 0px); }
+        &.amethyst{ @include raised-effect($amethyst, -1px, 0px); }
+        &.wisteria{ @include raised-effect($wisteria, -1px, 0px); }
+        &.wet-asphalt{ @include raised-effect($wet-asphalt, -1px, 0px); }
+        &.midnight-blue{ @include raised-effect($midnight-blue, -1px, 0px); }
+        &.sunflower{ @include raised-effect($sunflower, -1px, 0px); }
+        &.orange{ @include raised-effect($orange, -1px, 0px); }
+        &.carrot{ @include raised-effect($carrot, -1px, 0px); }
+        &.pumpkin{ @include raised-effect($pumpkin, -1px, 0px); }
+        &.alizarin{ @include raised-effect($alizarin, -1px, 0px); }
+        &.pomegranate{ @include raised-effect($pomegranate, -1px, 0px); }
+        &.cloud{ @include raised-effect($cloud, -1px, 0px); }
+        &.silver{ @include raised-effect($silver, -1px, 0px); }
+        &.concrete{ @include raised-effect($concrete, -1px, 0px); }
+        &.asbestos{ @include raised-effect($asbestos, -1px, 0px); }
+        &.blue-nights{ @include raised-effect($blue-nights, -1px, 0px); }
+        &.electromagnetic{ @include raised-effect($electromagnetic, -1px, 0px); }
+    }
+}
